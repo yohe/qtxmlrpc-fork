@@ -9,27 +9,31 @@ This has the following changes.
  
 * You can specify a function to be called from the name of the method of XMLRPC.
 
- ** this version
-
 ```
 srv->registerSlot( this, SLOT( paramTestRequestReceived(QVariant) ), "example.onParamTest" );
                                                                       ^^^^^^^^^^^^^^^^^^^
 ```
 
-   XML-RPC method      :      Program Function
---------------------------------------------------
-"example.onParamTest" --> paramTestRequestReceived
-
- ** original version
-
 ```
-srv->registerSlot( this, SLOT( paramTestRequestReceived(QVariant) ), "example.onParamTest" );
-                                                                      ^^^^^^^^^^^^^^^^^^^
+ XML-RPC method    : example.onParamTest
+ Program Function  : paramTestRequestReceived
 ```
 
-       XML-RPC method      :      Program Function
-------------------------------------------------------
-"paramTestResuetReceived" --> paramTestRequestReceived
+---
+### original version
+
+```
+srv->registerSlot( this, SLOT( paramTestRequestReceived(QVariant) ));
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+```
+
+```
+ XML-RPC method    : paramTestRequestReceived
+ Program Function  : paramTestRequestReceived
+```
+it must be same.
+
+---
 
 ## License
     GNU Lesser GPL
