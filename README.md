@@ -1,5 +1,9 @@
 # qtxmlrpc-fork
 ## Author
+    Original:
+    see [ http://code.google.com/p/qtxmlrpc/ ]
+    
+    Changed:
     Yohei.Sekiguchi <ysekiguchi.zzz@gmail.com> 
 
 # Description of Software
@@ -36,5 +40,5 @@ it must be same.
 ---
 
 ## License
-    GNU Lesser GPL
+    It is based on the original.
 
